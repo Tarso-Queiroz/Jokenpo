@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    width: 100vw;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #e4eaff;
+}
+
+h1{
+    color: #7d2ae8;
+}
+/*#f6f7fb*/
+.container{
+    background-color: #fff;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 2rem 5rem;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+}
+
+.results div{
+    display: flex;
+    gap: 7rem;
+    justify-content: center;
+
+    img{
+        width: 100px;
+    }
+
+}
+
+.chooseUser img{
+    transform: rotate(90deg);
+}
+
+.chooseComputer img{
+    transform: rotate(-90deg) rotateY(180deg);
+}
+
+.result-text{
+    text-align: center;
+    color: #7d2ae8;
+    font-weight: bold;
+    margin: 1.5rem 0;
+    font-size: 2rem;
+}
+
+.valores{
+    text-align: center;
+    color: #7d2ae8;
+    font-size: 1.1rem;
+}
+
+.container.start .chooseUser{
+    transform-origin: left;
+    animation: userShakes 0.7s ease infinite;
+}
+
+@keyframes userShakes {
+    50%{
+        transform: rotate(10deg);
+    }
+}
+
+.container.start .chooseComputer{
+    transform-origin: right;
+    animation: computerShakes 0.7s ease infinite;
+}
+
+@keyframes computerShakes {
+    50%{
+        transform: rotate(-10deg);
+    }
+}
+
+.options{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-top: 50px;
+   border-top: #7d2ae8 solid;
+   padding-top: 2.5rem;
+
+   p{
+    color: #7d2ae8;
+    font-size: 1.4rem;
+    font-weight: bold;
+    text-align: center;
+   }
+}
+
+.option-image{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s ease;
+
+    img{
+        width: 50px;
+    }
+}
+
+.option-image:hover{
+    opacity: 1;
+}
+
+.option-image:active{
+    opacity: 1;
+}
